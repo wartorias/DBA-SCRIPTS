@@ -1,0 +1,1 @@
+mysql -uroot -ptucun4r3 -e "show processlist" |grep "Sending data" |awk '{print $1}' |while read a ; do mysql -uroot -ptucun4r3 -e "kill $a";done
